@@ -1,5 +1,5 @@
 <div id="header">
-  <%= image_tag "Kenall.gif", id: "logo" %>
+  <%= link_to image_tag("Kenall.gif", id: "logo"), root_path %>
   <%= form_tag "/" do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "検索" %>
