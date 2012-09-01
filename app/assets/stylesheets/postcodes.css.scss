@@ -1,7 +1,12 @@
 // Place all the styles related to the postcodes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-color: #fcfefc;
+
+}
 div#header{
+  height: 110px;
   margin: 10px;
 }
 #logo{
@@ -11,6 +16,7 @@ form{
   margin-left:20px;
   margin-top:42px;
   float: left;
+  background-color: #FCFEFC;
 }
 input#search{
   width:340px;
