@@ -1,7 +1,10 @@
-<%= form_tag "/" do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "検索" %>
-<% end %>
+<div id="header">
+  <%= image_tag "Kenall.gif", id: "logo" %>
+  <%= form_tag "/" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "検索" %>
+  <% end %>
+</div>
 
 <% unless @searches.empty? %>
   <table>
