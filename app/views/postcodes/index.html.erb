@@ -1,0 +1,27 @@
+<%= form_tag "/" do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "検索" %>
+<% end %>
+
+<% unless @searches.empty? %>
+  <table>
+    <thead>
+      <tr>
+        <td>郵便番号</td>
+        <td>住所</td>
+      </tr>
+      <thead>
+    <tbody>
+      <% @searches.each do |search| %>
+        <tr>
+          <td><%= search.zip.gsub /^(\d{3})(\d{4})/,'\1-\2' %></td>
+          <td><%= highlighter search.address, params[:search] %><br>
+          <%= highlighter search.address_kana, params[:search] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%= paginate @searches %>
+<% else %>
+  <p>検索する語を入力してください</p> 
+<% end %>

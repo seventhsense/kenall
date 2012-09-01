@@ -1,0 +1,38 @@
+// Place all the styles related to the postcodes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+form{
+margin: 10px;
+padding-bottom:10px;
+}
+input#search{
+  width:340px;
+  height:22px;
+  font-size: 22px;
+  padding: 2px;
+}
+input[type="submit"]{
+  font-size: 20px;
+}    
+table{
+  margin: 10px;
+}
+td{
+  padding: 10px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  letter-spacing: 0.05em;
+}
+nav.pagination{
+  margin: 10px;
+  padding-top:10px;
+  font-size: 16px;
+}
+p{
+margin: 10px;
+padding-top: 20px;
+}
+span.strong{
+  background-color: yellow;
+  padding:0.1em;
+}
