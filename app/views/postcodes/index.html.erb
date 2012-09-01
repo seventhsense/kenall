@@ -1,7 +1,7 @@
 <div id="header">
   <%= link_to image_tag("Kenall.gif", id: "logo"), root_path %>
   <%= form_tag "/" do %>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, @search %>
     <%= submit_tag "検索" %>
   <% end %>
 </div>
@@ -18,8 +18,8 @@
       <% @searches.each do |search| %>
         <tr>
           <td><%= search.zip.gsub /^(\d{3})(\d{4})/,'\1-\2' %></td>
-          <td><%= highlighter search.address, params[:search] %><br>
-          <%= highlighter search.address_kana, params[:search] %></td>
+          <td><%= highlighter search.address, @search %><br>
+          <%= highlighter search.address_kana, @search %></td>
         </tr>
       <% end %>
     </tbody>
@@ -27,4 +27,6 @@
 <%= paginate @searches %>
 <% else %>
   <p>検索する語を入力してください</p> 
+  <p>地名から郵便番号、郵便番号から地名を検索するサイトです</p> 
+  <p>データは2012年9月1日現在のものを使用しています</p>
 <% end %>
