@@ -102,7 +102,7 @@ describe "Postcodes" do
       visit '/'
       fill_in 'search', with: '台東区浅草'
       click_button '検索'
-      page.should have_content '東京都 台東区 浅草'
+      page.should have_content '東京都 台東区'
     end
   end
 end

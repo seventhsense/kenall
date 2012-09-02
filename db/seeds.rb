@@ -9,7 +9,7 @@
 
 require 'csv'
 
-CSV.foreach("db/real_ken_all.csv") do |row|
+CSV.foreach("db/real_ken_all_tks.csv") do |row|
   h = {
     zip: row[0],
     address: row[1],
